@@ -19,6 +19,12 @@ app.use(express.json())
 
 //const auth = require('./middlewares/authentication')
 
+app.get('/', (req, res, _next) => {
+  res.send({
+    msg: 'servidor rodando'
+  })
+})
+
 app.post('/users', async (req, res, _next) => {
   var data = req.body;
 
